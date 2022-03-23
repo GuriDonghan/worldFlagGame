@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct ContentView: View {
     
@@ -351,9 +352,11 @@ struct ContentView: View {
         if number == correctAnswer {
             scoreTitle = "정답입니다!"
             userScore += 5
+            SoundSetting.instance.playSound(sound: .correctAnswer2)
         } else {
             scoreTitle = "앗! 이건 \(countries[number]) 국기입니다."
             userScore -= 2
+            SoundSetting.instance.playSound(sound: .wrongAnswer2)
         }
         
         showingScore = true
@@ -402,6 +405,33 @@ struct FlagImage: View {
     
 }
 
+
+// 버튼 클릭시 Sound 재생 할 수 있는 코드
+class SoundSetting: ObservableObject {
+    //1. soundSetting의 단일 인스턴스를 만듬
+    /// singleton ? :
+    /// 싱글 톤은 한 번만 생성 된 다음 사용해야하는 모든 곳에서 공유해야하는 객체입니다.
+    
+    static let instance = SoundSetting()
+    
+    var player: AVAudioPlayer?
+    
+    enum SoundOption: String {
+        case correctAnswer2
+        case wrongAnswer2
+    }
+    
+    func playSound(sound: SoundOption) {
+        guard let url = Bundle.main.url(forResource: sound.rawValue, withExtension: ".wav") else { return }
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            player?.play()
+        } catch let error {
+            print("재생하는데 오류가 발생했습니다. \(error.localizedDescription)")
+        }
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

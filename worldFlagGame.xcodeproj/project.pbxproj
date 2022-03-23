@@ -11,6 +11,8 @@
 		CE19E44527EAE57C00EF6FE8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19E44427EAE57C00EF6FE8 /* ContentView.swift */; };
 		CE19E44727EAE57E00EF6FE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE19E44627EAE57E00EF6FE8 /* Assets.xcassets */; };
 		CE19E44A27EAE57E00EF6FE8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE19E44927EAE57E00EF6FE8 /* Preview Assets.xcassets */; };
+		CE19E45527EB1F2100EF6FE8 /* wrongAnswer2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CE19E45427EB1F2100EF6FE8 /* wrongAnswer2.wav */; };
+		CE19E45927EB1FB700EF6FE8 /* correctAnswer2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CE19E45827EB1FB700EF6FE8 /* correctAnswer2.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		CE19E44427EAE57C00EF6FE8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE19E44627EAE57E00EF6FE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE19E44927EAE57E00EF6FE8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE19E45427EB1F2100EF6FE8 /* wrongAnswer2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrongAnswer2.wav; sourceTree = "<group>"; };
+		CE19E45827EB1FB700EF6FE8 /* correctAnswer2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = correctAnswer2.wav; path = ../../../../Downloads/correctAnswer2.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				CE19E44227EAE57C00EF6FE8 /* worldFlagGameApp.swift */,
 				CE19E44427EAE57C00EF6FE8 /* ContentView.swift */,
+				CE19E45827EB1FB700EF6FE8 /* correctAnswer2.wav */,
+				CE19E45427EB1F2100EF6FE8 /* wrongAnswer2.wav */,
 				CE19E44627EAE57E00EF6FE8 /* Assets.xcassets */,
 				CE19E44827EAE57E00EF6FE8 /* Preview Content */,
 			);
@@ -125,7 +131,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE19E45527EB1F2100EF6FE8 /* wrongAnswer2.wav in Resources */,
 				CE19E44A27EAE57E00EF6FE8 /* Preview Assets.xcassets in Resources */,
+				CE19E45927EB1FB700EF6FE8 /* correctAnswer2.wav in Resources */,
 				CE19E44727EAE57E00EF6FE8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
